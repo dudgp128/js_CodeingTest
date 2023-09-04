@@ -6,15 +6,14 @@
     <body>
         <script>
             function solution(arr) {
-                const all_sum=arr.reduce((acc, cur)=>acc+cur,0)
+                let sum = arr.reduce((acc, cur)=>acc+cur,0)
                 for(let i=0; i<arr.length; i++){
                     for(let j=i+1; j<arr.length; j++){
-                        if(all_sum - (arr[i]+arr[j])===100){
-                            return arr.filter((element, index)=>index!==i&&index!==j)
+                        if(sum-(arr[i]+arr[j])===100){
+                            return arr.filter((e, index)=>index!==i && index!==j)
                         }
                     }
                 }
-                return [];
             }
 
 let arr = [22, 7, 21, 19, 10, 15, 25, 8, 13];

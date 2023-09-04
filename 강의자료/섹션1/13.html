@@ -6,12 +6,7 @@
     <body>
         <script>
             function solution(s){  
-                let result=''
-                for(let x of s){
-                    const text=(x===x.toUpperCase())?x.toLowerCase():x.toUpperCase()
-                    result=result.concat(text)
-                }
-                return result
+               return Array.from(s).map((element)=>element.toUpperCase()===element?element.toLowerCase():element.toUpperCase()).join('')
             }
 
             console.log(solution("StuDY"));
