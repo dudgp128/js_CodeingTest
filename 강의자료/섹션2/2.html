@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(length, arr){        
+                let sum=0;
+                arr.reduce((acc, cur)=>{
+                    let max = Math.max(acc, cur)
+                    if(max === cur){
+                        sum++
+                    }
+                    return max
+                })
+                return sum
+            }
+
+            let arr=[130, 135, 148, 140, 140, 140, 145, 150, 150, 153];
+            console.log(solution(arr.length, arr));
+        </script>
+    </body>
+</html>

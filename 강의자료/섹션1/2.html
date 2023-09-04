@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                const set=[a,b,c]
+                const max =set.reduce((acc, cur)=>Math.max(acc, cur),set[0])
+                const maxIndex=set.findIndex((e)=>e===max)
+                const sum=set.filter((e,i)=>i!=maxIndex).reduce((acc, cur)=>acc+cur,0)
+                return sum>max? "YES":"NO"
+            }
+            console.log(solution(6, 7, 11));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let index=[Math.floor(s.length/2)]
+
+                if(s.length%2){
+                    return s[index]
+                }
+                else{
+                    return (s[index-1]+s[index])
+                }
+            }
+            console.log(solution("study"));
+        </script>
+    </body>
+</html>

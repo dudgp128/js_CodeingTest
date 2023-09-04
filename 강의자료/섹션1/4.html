@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                var sum=n;
+                function add(e){
+                    if(n>1){
+                        sum+=n-1;
+                        n=n-1
+                        add(n);
+                    }   
+                    else return 0;
+                }
+                add(n)
+                return sum;
+            }
+            console.log(solution(6))
+            console.log(solution(10));
+        </script>
+    </body>
+</html>
