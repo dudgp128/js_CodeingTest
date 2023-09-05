@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){                
+                let max={'sum':0, 'element':0}
+                let sum=0;
+                function add(number){
+                    if(number/10<1){
+                        sum+=number;
+                        return sum;
+                    }
+                    sum+=number%10;
+                    return add(Math.floor(number/10));
+                }
+
+                arr.forEach(element => {
+                    if(Math.max(max.sum, add(element))===sum){
+                        max.sum=sum;
+                        max.element=max.element<element?element:max.element;
+                    }
+                    sum=0;
+                });
+                return max.element;
+            }
+            
+            const array=[128, 460, 603, 40, 521, 137, 123];
+            console.log(solution(7, array));
+        </script>
+    </body>
+</html>

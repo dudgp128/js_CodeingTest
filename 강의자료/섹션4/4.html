@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(m, product){
+                let result=0;
+
+                const price=product.map((element, index)=>
+                    element[0]/2+element[1]
+                )
+                
+                const sorted=price.sort((a,b)=>a-b)
+
+                for(let i=0; i<sorted.length; i++){
+                    if(m-sorted[i]>=0){
+                        result++;
+                        m=m-sorted[i];
+                    }
+                    else{
+                        break;
+                    }
+                }
+                return result;
+            }
+            
+            let arr=[[6, 6], [2, 2], [4, 3], [4, 5], [10, 3]];
+            console.log(solution(28, arr));  // 4
+            console.log(solution(41, [[8, 6], [2, 2], [4, 3], [4, 5], [12, 1]])); // 답 : 5
+            console.log(solution(41, [[8, 6], [2, 2], [12, 1], [4, 5], [4, 3]])); // 5
+            console.log(solution(33, [[2, 12], [8, 4], [6, 6], [6, 7]]));  // 3
+        </script>
+    </body>
+</html>
