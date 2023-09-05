@@ -8,7 +8,11 @@
             function solution(s){
                 let lower_s=s.toLowerCase();
                 let filtered=lower_s.replace((/[^a-z ]/g), '')
+<<<<<<< HEAD
                 let reversed = filtered.split('').reverse().join('')
+=======
+                let reversed = filtered.split('').join('')
+>>>>>>> 13e96ee047fb106202010c6a2ce53e48f8780ca1
                 return filtered === reversed? 'YES':'NO';
             }
             
