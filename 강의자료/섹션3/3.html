@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                let filtered=str.replace((/[^0-9]/g),'')
+                while(filtered[0]==='0'){
+                        filtered=filtered.replace((/[0]/),'');
+                }
+                return filtered
+            }
+            
+            let str="g0en2T0s8eSoft";
+            let str2='tge0a1h205er';
+            console.log(solution(str));
+            console.log(solution(str2))
+        </script>
+    </body>
+</html>
