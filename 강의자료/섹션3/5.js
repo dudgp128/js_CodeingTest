@@ -1,15 +1,18 @@
 function solution(s) {
-  const arr = Array.from(s + " ");
-  let temp = arr[0];
-  let count = 0;
+  let count = 1;
+  let temp = "";
   let result = "";
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === temp) {
-      count++;
-    } else {
-      result += count !== 1 ? temp + count : temp;
-      temp = arr[i];
+  for (let x of s + " ") {
+    console.log(x, count);
+    if (temp != x) {
+      temp = x;
+      if (count > 1) {
+        result += count;
+      }
+      result += x;
       count = 1;
+    } else {
+      count++;
     }
   }
   return result;
