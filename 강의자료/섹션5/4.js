@@ -2,7 +2,6 @@ function solution(m, arr) {
   let sum = 0,
     answer = 0,
     lt = 0;
-  let set = [];
 
   for (let rt = 0; rt < arr.length; rt++) {
     sum += arr[rt];
